@@ -13,6 +13,8 @@ function App() {
   //              setLists(response.data)
   //          })
   //  }, [])
+
+
   useEffect(() => {
     //여기서 데이터베이스에 있는 값을 가져온다.
     axios.get('/api/values')
@@ -29,8 +31,8 @@ function App() {
     setValue(event.currentTarget.value)
     }
   */
-  const [lists, setLists] = useState([])
-  const [value, setValue] = useState("")
+    const [lists, setLists] = useState([])
+    const [value, setValue] = useState("")
 
   const changeHandler = (event) => {
     setValue(event.currentTarget.value)

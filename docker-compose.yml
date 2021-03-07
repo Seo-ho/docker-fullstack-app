@@ -7,6 +7,8 @@ services:
     volumes:
       - /app/node_modules
       - ./frontend:/app
+    enviroment:
+      - CHOKIDAR_USEPOLLING=true
     stdin_open: true
 
   nginx:
@@ -32,7 +34,7 @@ services:
       MYSQL_DATABASE: myapp
       MYSQL_PORT: 3306
   #mysql:
-  #  build: ./mysql //
+  #  build: ./mysql
   #  restart: unless-stopped
   #  container_name: app_mysql
   #  ports:
